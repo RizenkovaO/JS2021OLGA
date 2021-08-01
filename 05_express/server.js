@@ -53,10 +53,11 @@ server.get("/", function (req, res) {
 // server.get("/students/*", StudentsController);
 server.get("/students/create", StudentsCtrl.renderForm);
 server.get("/students/:studentId?", StudentsCtrl.main);
+server.get("/students/create", StudentsCtrl.renderForm);
 server.post("/students/create", StudentsCtrl.createStudent);
 
 server.use("*", function (req, res) {
-  res.render("page/error");
+  res.render("pages/error");
 });
 
 const port = 3000;
