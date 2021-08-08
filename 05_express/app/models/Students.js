@@ -27,8 +27,7 @@ class Students {
         FROM student
         WHERE id = ${id}
       `)
-
-      return result.row[0]
+      return result.rows[0]
     } catch (error) {
       console.error(error)
     }
